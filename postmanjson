@@ -1,0 +1,92 @@
+
+
+
+usercontroller:
+ create user:
+url: http://localhost:8080/api/users
+json:
+      {
+  "username": "arvi",
+  "isPremium": true
+}
+
+get all users:
+url: http://localhost:8080/api/users
+
+updateusers:
+url: http://localhost:8080/api/users/1
+
+delete user:
+url: http://localhost:8080/api/users/1
+
+Botcontroller:
+1. Method: POST
+URL: http://localhost:8080/api/bots
+Body → raw → JSON:
+
+{
+  "name": "botuse",
+  "personaDescription": "bot respond"
+}
+getallbots:
+Method: GET
+URL: http://localhost:8080/api/bots
+
+getbotid:
+  Method: GET
+URL: http://localhost:8080/api/bots/1
+
+updatebot:
+  Method: PUT
+URL: http://localhost:8080/api/bots/1
+
+deleteBot:
+   Method: DELETE
+URL: http://localhost:8080/api/bots/1
+
+create post:
+Method: POST
+url: http://localhost:8080/api/posts
+json : {
+  "authorId": 1,
+  "authorType": "USER",
+  "content": "Hello this is my first post!"
+}
+
+getallposts:
+url: GET http://localhost:8080/api/posts
+
+getpostByid:
+url: GET http://localhost:8080/api/posts/1
+likepost:
+url: POST http://localhost:8080/api/posts/1/like
+response: liked successfully.
+
+addComment:
+
+method:post
+urls: http://localhost:8080/api/posts/1/comments
+json:
+{
+  "authorType": "USER",
+  "authorId": 1,
+  "content": "This is a user comment",
+  "depthLevel": 0
+}
+
+botcomment:
+{
+  "authorType": "BOT",
+  "authorId": 1,
+  "humanOwnerId": 2,
+  "content": "Bot replying automatically",
+  "depthLevel": 1
+}
+Get Comments for a Post :
+url: GET http://localhost:8080/api/posts/1/comments
+
+
+
+
+
+
